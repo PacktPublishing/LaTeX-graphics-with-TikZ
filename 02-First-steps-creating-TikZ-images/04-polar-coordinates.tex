@@ -1,0 +1,10 @@
+\documentclass[tikz,border=10pt]{standalone}
+\begin{document}
+\begin{tikzpicture}
+  \draw[thin,dotted] (-3,-3) grid (3,3);
+  \draw (-3,0) -- (3,0);
+  \draw (0,-3) -- (0,3);
+  \draw[very thick, blue] (0:2) -- (60:2) -- (120:2)
+    -- (180:2) --(240:2) -- (300:2) -- cycle;
+\end{tikzpicture}
+\end{document}
