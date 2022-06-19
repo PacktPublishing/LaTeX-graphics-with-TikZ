@@ -1,0 +1,10 @@
+\documentclass[tikz,border=10pt]{standalone}
+\begin{document}
+\begin{tikzpicture}
+  \draw[shading=ball,ball color=yellow] (0,0) circle [radius=2];
+  \draw[shading=ball,ball color=black] (-0.5,0.5,0) ellipse [x radius=0.2, y radius=0.4];
+  \draw[shading=ball,ball color=black] (0.5,0.5,0) ellipse [x radius=0.2, y radius=0.4];
+  \draw[very thick] (-1,-1) arc [start angle=185, end angle=355,
+    x radius=1, y radius=0.5];
+\end{tikzpicture}
+\end{document}
