@@ -1,0 +1,10 @@
+\documentclass[tikz,border=10pt]{standalone}
+\begin{document}
+\begin{tikzpicture}[y={(-0.86cm,0.5cm)},x={(0.86cm,0.5cm)}, z={(0cm,1cm)},font=\sffamily]
+  \draw[very thick, blue] (-2,-2,0) -- (-2,2,0) -- (2,2,0) -- (2,-2,0) -- cycle;
+  \draw[->] (0,0,0) -- (2.5, 0,  0) node [right] {x};
+  \draw[->] (0,0,0) -- (0,  2.5, 0) node [left] {y};
+  \draw[->,dashed] (0,0,0) -- (0,  0, 2.5) node [above] {z};
+  \draw circle (2);
+\end{tikzpicture}
+\end{document}
