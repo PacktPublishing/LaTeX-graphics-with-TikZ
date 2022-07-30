@@ -1,0 +1,10 @@
+\documentclass[border=10pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\begin{document}
+\begin{tikzpicture}
+  \node (A) {A};
+  \node[right= 4 cm of A] (B) {B};
+  \draw (A) edge node [fill=white] {1} (B);
+\end{tikzpicture}
+\end{document}
