@@ -1,0 +1,27 @@
+\documentclass[border=10pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\tikzset{
+  mytext/.style = {font=\sffamily\bfseries, text=white},
+  vertex/.style = {mytext, shape = circle,
+                   ball color = blue},
+  number/.style = {mytext, draw, fill = red}}
+\tikzset{
+  bridge/.style = {thick, double = yellow,
+          double distance = 1pt}}
+\begin{document}
+\begin{tikzpicture}
+  \node[vertex] (A) {A};
+  \node[vertex, right = 4 cm of A] (B) {B};
+  \draw (A) edge [bridge] node [number] {1} (B);
+  \node[vertex, below = 2cm of A] (C) {C};
+  \node[vertex, above = 2cm of A] (D) {D};
+  \tikzset{bridge/.append style = {bend right}}
+  \draw (C) edge [bridge] node [number] {2} (B)
+        (B) edge [bridge] node [number] {3} (D)
+        (C) edge [bridge] node [number] {4} (A)
+        (A) edge [bridge] node [number] {5} (C)
+        (A) edge [bridge] node [number] {6} (D) 
+        (D) edge [bridge] node [number] {7} (A);
+\end{tikzpicture}
+\end{document}
