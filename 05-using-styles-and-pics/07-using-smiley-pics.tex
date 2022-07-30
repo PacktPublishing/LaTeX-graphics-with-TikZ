@@ -1,0 +1,20 @@
+\documentclass[tikz,border=10pt]{standalone}
+\tikzset{smiley/.pic={
+  \draw[shading=ball, ball color=yellow] (0,0)
+    circle [radius=2];
+  \draw[shading=ball, ball color=black] (-0.5,0.5,0)
+    ellipse [x radius=0.2, y radius=0.4];
+  \draw[shading=ball, ball color=black] (0.5,0.5,0)
+    ellipse [x radius=0.2, y radius=0.4];
+  \draw[very thick] (-1,-1) arc [start angle=185,
+    end angle=355, x radius=1, y radius=0.5];}}
+\begin{document}
+\begin{tikzpicture}
+\draw
+  (0,0)    pic{smiley}
+  (2,2)    pic [scale=0.5,  rotate=-30] {smiley} 
+  (-2,1.5) pic [scale=0.3,  rotate= 30] {smiley} 
+  (-1.6,2) pic [scale=0.15, rotate=-20] {smiley} 
+  (0,2)    pic [scale=0.2,  rotate=-10] {smiley};
+\end{tikzpicture}
+\end{document}
