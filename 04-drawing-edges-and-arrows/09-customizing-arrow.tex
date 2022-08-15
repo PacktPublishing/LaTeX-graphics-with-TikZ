@@ -1,0 +1,13 @@
+\documentclass[border=10pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows.meta}
+\begin{document}
+\begin{tikzpicture}
+  \node (tex) [fill=orange, text=white] {TEX};
+  \node (pdf) [fill={rgb:red,244;green,15;blue,2},
+    text=white, right=of tex] {PDF};
+  \draw (tex) edge[very thick, draw=red,
+    -{Stealth[color=orange, fill=red, width=8pt, length=10pt]}]
+    (pdf);
+\end{tikzpicture}
+\end{document}
