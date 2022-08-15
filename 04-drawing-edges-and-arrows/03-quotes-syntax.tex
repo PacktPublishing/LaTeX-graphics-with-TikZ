@@ -1,0 +1,12 @@
+\documentclass[border=10pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning,quotes}
+\begin{document}
+\begin{tikzpicture}
+  \node (tex) [fill=orange, text=white] {TEX};
+  \node (pdf) [fill={rgb:red,244;green,15;blue,2},
+    text=white, right=of tex] {PDF};
+  \draw (tex)
+    edge["pdflatex" {font=\ttfamily\tiny,above},->] (pdf);
+\end{tikzpicture}
+\end{document}
