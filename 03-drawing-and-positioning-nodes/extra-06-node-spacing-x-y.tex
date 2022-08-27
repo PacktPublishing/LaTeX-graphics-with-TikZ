@@ -1,0 +1,28 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usetikzlibrary{calc}
+\begin{document}
+\begin{tikzpicture}[font={\scriptsize\ttfamily}]
+\node[draw,rectangle,outer xsep=1cm,outer ysep=0.5cm,inner xsep=1cm,
+  inner ysep=0.5cm,color=black!50, draw, fill=blue!10,] (n) {{\sffamily\Large node n}};
+
+\draw[<->,thick,blue] (n.south)
+    --++(0,0.5cm) node[midway,right]{outer ysep};
+
+\draw[<->,thick,red] (n.south) ++(0,0.5cm) 
+    --++(0,0.5cm)node[midway,right]{inner ysep};
+    
+\draw[<->,blue,thick] (n.west) -- ++(1cm,0) node[midway,above] {outer}
+  node[midway,below] {xsep};
+
+\draw[<->,red,thick] ($(n.west)+(1,0)$) -- ++(1cm,0) node[midway,above] {inner}
+  node[midway,below] {xsep};
+
+\foreach \anchor/\placement in
+  {south west/below left,south/below,north/above,north west/above left,
+     north east/above right,south east/below right}
+     \draw[shift=(n.\anchor)] plot[mark=x] coordinates{(0,0)}
+      node[\placement,label distance = 0mm,inner sep=3pt] {(n.\anchor)};
+\draw[dashed] (n.south west) rectangle (n.north east);
+\node[above] at ($(n.center)!0.5!(n.north)$) {shape rectangle};
+\end{tikzpicture}
+\end{document}
