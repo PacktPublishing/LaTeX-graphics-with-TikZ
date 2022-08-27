@@ -1,0 +1,15 @@
+\documentclass[border=10pt]{standalone}
+\usepackage{tikz}
+\usepackage{tikzpeople}
+\usetikzlibrary{shapes}
+\begin{document}
+\begin{tikzpicture}
+  \node (student) [graduate, monitor, minimum size=2cm] {};
+  \node at (student.45) [starburst, draw=red, fill=yellow,
+    starburst point height=0.4cm, line width=1pt,
+    font=\ttfamily\scriptsize, inner sep=1.5pt] {error};
+  \node at (student.130) [cloud callout, cloud puffs=13, aspect=3,
+    anchor=pointer, shading=ball, ball color=darkgray,
+    text=white, font=\bfseries] {My thesis...!};
+\end{tikzpicture}
+\end{document}
