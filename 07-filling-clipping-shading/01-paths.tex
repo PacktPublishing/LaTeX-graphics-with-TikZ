@@ -1,0 +1,16 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usetikzlibrary{scopes}
+\begin{document}
+\begin{tikzpicture}
+  \draw (90:2) -- (210:2) -- (330:2) -- cycle
+        (90:1) -- (330:1) -- (210:1) -- cycle;
+  {[shift={(3cm,0.35cm)},scale=1.65]
+    \draw (90:1) -- (234:1) -- (18:1)
+      -- (162:1) -- (306:1) -- cycle;
+  }
+  {[shift={(7cm,0.5cm)},scale=0.76]
+    \draw (-1,0) circle (1.2) (-1,0) circle (2);
+    \draw (1,0)  circle (1.2)  (1,0) circle (2);
+  }
+\end{tikzpicture}
+\end{document}
