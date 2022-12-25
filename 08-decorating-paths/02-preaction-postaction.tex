@@ -1,0 +1,9 @@
+\documentclass[tikz,border=10pt]{standalone}
+\begin{document}
+\begin{tikzpicture}
+  \draw[orange, line width=3mm,
+    preaction =  {draw, red,    line width=5mm},
+    postaction = {draw, yellow, line width=1mm}]
+    (90:2) -- (210:2) -- (330:2) -- cycle;
+\end{tikzpicture}
+\end{document}
