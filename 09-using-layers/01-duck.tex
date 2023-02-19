@@ -1,0 +1,11 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usetikzlibrary{shapes.geometric,decorations.pathmorphing,backgrounds}
+\usepackage{tikzducks}
+\begin{document}
+\begin{tikzpicture}
+  \duck[laughing]
+  \fill[top color=white, bottom color=blue, opacity=0.5]
+    (-1,-0.2) -- (-1,0.5)
+    decorate[decoration={snake}]{-- (3,0.5)} -- (3,-0.2);
+\end{tikzpicture}
+\end{document}
