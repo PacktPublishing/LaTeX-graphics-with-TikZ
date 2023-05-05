@@ -1,0 +1,9 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{smartdiagram}
+\begin{document}
+\smartdiagramset{sequence item font size=\sffamily\Large\strut,
+   set color list={red!80, red!60, red!45, red!30} }
+\tikzset{module/.append style = {top color=\col} }
+\smartdiagram[sequence diagram]{
+  Styles, Positions, Arrows, Labels}
+\end{document}
