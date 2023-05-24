@@ -1,0 +1,10 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{smartdiagram}
+\smartdiagramset{planet font=\sffamily\LARGE,
+  planet text width=2.2cm,
+  satellite font=\sffamily}
+\begin{document}
+\smartdiagram[connected constellation diagram]{
+  Drawing diagrams, Define styles,
+  Position nodes, Add arrows, Add labels}
+\end{document}
