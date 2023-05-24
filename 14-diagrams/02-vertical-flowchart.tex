@@ -1,0 +1,12 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{smartdiagram}
+\smartdiagramset{font=\sffamily,
+   text width = 3cm, back arrow disabled}
+\tikzset{module/.append style=
+  { top color=\col, bottom color=\col},
+  every shadow/.style = {fill=none, shadow scale=0}}
+\begin{document}
+\smartdiagram[flow diagram]{
+  Define styles, Position nodes, Add arrows,
+  Add labels, Review and refine}
+\end{document}
