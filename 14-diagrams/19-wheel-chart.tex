@@ -1,0 +1,14 @@
+\documentclass[border=10pt]{standalone}
+\usepackage{wheelchart}
+\begin{document}
+\begin{tikzpicture}[every node/.style={font=\sffamily}]
+  \wheelchart [middle={{\LARGE TikZ.net}\\contributions},
+    inner data = {\scriptsize\WCperc}, inner data sep=0.3,
+    wheel lines=white]
+    {42/red/Izaak\\Neutelings,
+     21/orange/Janosh Riebesell,
+     17/yellow/Alexandros\\Tsagkaropoulos,
+     10/green/Efraín Soto Apolinar,
+     10/blue/Other authors}
+\end{tikzpicture}
+\end{document}
