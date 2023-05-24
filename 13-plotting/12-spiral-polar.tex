@@ -1,0 +1,11 @@
+\documentclass[border=10pt]{standalone}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepgfplotslibrary{polar}
+\begin{document}
+\begin{tikzpicture}
+  \begin{polaraxis}[yticklabel=\empty]
+	\addplot[domain=0:2880,samples=400,smooth,thick] {x};
+	\end{polaraxis}
+\end{tikzpicture}
+\end{document}
