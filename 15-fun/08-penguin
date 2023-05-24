@@ -1,0 +1,5 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{tikzpingus}
+\begin{document}
+\tikz{\pingu}
+\end{document}
