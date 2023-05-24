@@ -1,0 +1,12 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{jigsaw}
+\usetikzlibrary{matrix}
+\begin{document}
+\begin{tikzpicture}
+  \matrix[column sep=-0.315cm, row sep=-0.315cm] {
+    \piece[red,overlay]{-1}{-1}{0}{0}
+  & \piece[yellow]{-1}{0}{0}{1} \\
+    \piece[blue]{0}{-1}{1}{0}
+  & \piece[green]{0}{0}{1}{1} \\ };
+\end{tikzpicture}
+\end{document}
