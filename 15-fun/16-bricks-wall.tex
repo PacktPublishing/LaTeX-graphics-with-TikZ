@@ -1,0 +1,16 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{tikzbricks}
+\begin{document}
+\begin{wall}
+  \wallbrick[color=blue]{2}{2}
+  \wallbrick[color=red]{1}{2}
+  \stepcounter{brickx}
+  \wallbrick[color=green]{2}{2}
+  \newrow
+  \stepcounter{brickx}{1}
+  \wallbrick[color=brown]{4}{2}
+  \newrow
+  \addtocounter{brickx}{2}
+  \wallbrick[color=orange]{2}{2}
+\end{wall}
+\end{document}
