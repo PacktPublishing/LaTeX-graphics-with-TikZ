@@ -1,0 +1,18 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{jigsaw}
+\usepackage{worldflags}
+\begin{document}
+\begin{tikzpicture}
+  \piece[red]{-1}{-1}{0}{0}
+  % Now scopes for shifting:
+  \begin{scope}[shift={(0,-1)}]
+    \piece[blue]{0}{-1}{1}{0}
+  \end{scope}
+  \begin{scope}[shift={(1,0)}]
+    \piece[yellow]{-1}{0}{0}{1}
+  \end{scope}
+  \begin{scope}[shift={(1,-1)}]
+    \piece[green]{0}{0}{1}{1}
+  \end{scope}
+\end{tikzpicture}
+\end{document}
