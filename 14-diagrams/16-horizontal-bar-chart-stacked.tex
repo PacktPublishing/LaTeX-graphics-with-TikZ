@@ -1,0 +1,23 @@
+\documentclass[border=10pt]{standalone}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{sansmath}
+\begin{document}
+\begin{tikzpicture}[every node/.style={font=\sffamily}]
+  \begin{axis}[title  = Keyword popularity on LaTeX.org,
+    height=6cm, enlarge y limits  = 2.2,
+    xbar stacked, xmin=-10,
+    axis x line = none,
+    y axis line style = transparent,
+    ytick = data,
+    tickwidth = 0pt,
+    symbolic y coords = {TikZ, PSTricks, MetaPost},
+    nodes near coords,
+    nodes near coords style = {font=\sansmath},
+    legend cell align = right ]
+    \addplot coordinates { (2750,TikZ) (1568,PSTricks) };
+    \addplot coordinates { (1197,TikZ) (585,PSTricks)  };
+    \legend{Posts,Topics}
+  \end{axis}
+\end{tikzpicture}
+\end{document}
