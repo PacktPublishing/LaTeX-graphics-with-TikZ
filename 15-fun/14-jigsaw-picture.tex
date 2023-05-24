@@ -1,0 +1,11 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{jigsaw}
+\usepackage{tikzlings}
+\tikzset{chicken/.pic={\chicken}}
+\begin{document}
+\begin{tikzpicture}
+  \fill[gray!40] (0,0) rectangle (3,3);
+  \pic[scale=1.25] at (1.5,0){chicken};
+  \jigsaw{3}{3}
+\end{tikzpicture}
+\end{document}
