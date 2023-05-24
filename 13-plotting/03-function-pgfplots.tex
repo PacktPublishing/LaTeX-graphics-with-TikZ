@@ -1,0 +1,10 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{pgfplots}
+\begin{document}
+\begin{tikzpicture}
+  \begin{axis}[axis lines=center]
+    \addplot[samples=80, smooth, thick, domain=-3:3]
+      {x^3/5 - x};
+  \end{axis}
+\end{tikzpicture}
+\end{document}
