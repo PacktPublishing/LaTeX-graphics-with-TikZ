@@ -1,1 +1,15 @@
-
+\documentclass[border=10pt]{standalone}
+\usepackage{pgfplots}
+\usepgfplotslibrary{colormaps}
+\pgfplotsset{trig format plots=rad}
+\begin{document}
+\begin{tikzpicture}
+  \begin{axis}[
+      domain    = -4:4, samples y = 80,
+      y domain  = -4:4, samples   = 80,
+      colormap/blackwhite,
+      grid]
+    \addplot3[surf] { cos(sqrt(x^2+y^2)) };
+  \end{axis}
+\end{tikzpicture}
+\end{document}
