@@ -1,0 +1,13 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{pgfplots}
+\usepgfplotslibrary{colormaps}
+\begin{document}
+  \begin{tikzpicture}
+    \begin{axis}[hide axis, colormap/hot2]
+      \addplot3 [surf, z buffer=sort, trig format plots=rad,
+        samples=65, domain=-pi:pi, y domain=0:1.25,
+        variable=t, variable y=r]
+        ({r*sin(t)}, {r*cos(t)}, {(r^2-1)^2});
+    \end{axis}
+  \end{tikzpicture}
+\end{document}
