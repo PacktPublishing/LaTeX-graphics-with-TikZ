@@ -1,0 +1,16 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{smartdiagram}
+\usetikzlibrary{shapes.geometric}
+\smartdiagramset{planet font=\sffamily\Huge,
+   satellite font=\sffamily,
+   planet color=green!40, uniform connection color=true,
+   uniform color list = red!40 for 8 items}
+\tikzset{satellite/.append style={regular polygon,
+  regular polygon sides=8, inner sep=0pt},
+  planet/.append style={regular polygon,
+  regular polygon sides=8, inner sep=6pt}}
+\begin{document}
+\smartdiagram[constellation diagram]{TikZ,
+  pgfplots, smartdiagram, hobby, tikzducks,
+  tikzlings, tikzpeople, tikzmark, tikz-ext}
+\end{document}
