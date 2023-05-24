@@ -1,0 +1,16 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{smartdiagram}
+\usepackage{fontawesome5}
+\begin{document}
+\smartdiagramset{description title font=\LARGE,
+  description font=\sffamily}
+\smartdiagram[descriptive diagram]{
+  {\faLightbulb[regular],{Identify purpose and message,
+    gather information and data}},
+  {\faProjectDiagram, {Select diagram type,
+    define node shapes, colors, and text styles}},
+  {\faPencil*, {Draw nodes, insert text, draw arrows,
+    add labels}},
+  {\faAlignLeft, {Align nodes, refine positioning}},
+  {\faRedo, {Fine-tune, review and revise}}, }
+\end{document}
