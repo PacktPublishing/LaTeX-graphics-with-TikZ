@@ -1,0 +1,11 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{pgfplots}
+\pgfplotsset{every axis plot post/.append style={thick,smooth,mark=none}}
+\begin{document}
+\begin{tikzpicture}
+  \begin{axis}[axis lines = middle, domain = -1.25:1.25,
+    y domain = 0:1.25, ymax = 1.25]
+    \addplot { (x^2-1)^2 };
+  \end{axis}
+\end{tikzpicture}
+\end{document}
