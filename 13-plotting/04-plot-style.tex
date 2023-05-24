@@ -1,0 +1,11 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{pgfplots}
+\pgfplotsset{every axis plot post/.append style =
+  {samples=80, smooth, thick, black, mark=none} }
+\begin{document}
+\begin{tikzpicture}
+  \begin{axis}[axis lines = middle, domain = -3:3]
+    \addplot {x^3/5 - x};
+  \end{axis}
+\end{tikzpicture}
+\end{document}
