@@ -1,0 +1,13 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usetikzlibrary {positioning,matrix}
+\usepackage{tikzlings}
+\tikzset{bat/.pic={\bat}}
+\usepackage{bearwear}
+\begin{document}
+\begin{tikzpicture}
+  \bear
+  \bearwear[shirt={shade, top color=yellow, bottom color=red},
+    body deco={\node[scale=0.5] at ([yshift=0.8mm]bearheart) {\tiny TikZ};
+  \pic at (beartummy)[scale=0.18,yshift=-1cm]{bat} ;}]
+\end{tikzpicture}
+\end{document}
