@@ -1,0 +1,16 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usetikzlibrary{spline}
+\begin{document}
+\begin{tikzpicture}
+  \foreach \x/\y in { -3/-2.4, -1.3/0.86,
+    1.3/-0.86, 3/2.4 }
+      \fill (\x,\y) circle (0.6mm);
+  \draw[thick] (-3,-2.4) to[spline coordinates=S, spline through={(-1.3,0.86)(1.3,-0.86)}] (3,2.4);
+  \foreach \i [evaluate=\i as \j using \i+1] in {1,2,...,\tikzsplinesegments} {
+    \draw[thin]  (S K-\i) -- (S P-\i)
+                      (S K-\j) -- (S Q-\i);
+    \fill[gray!50,semithick] (S P-\i) circle (0.6mm);
+    \fill[gray!50,semithick] (S Q-\i) circle (0.6mm);
+  }
+\end{tikzpicture}
+\end{document}
