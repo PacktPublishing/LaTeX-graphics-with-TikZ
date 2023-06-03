@@ -1,0 +1,11 @@
+\documentclass[tikz,border=10pt]{standalone}
+\begin{document}
+\begin{tikzpicture}
+  \foreach \x/\y in { -3/-2.4, 3/2.4 }
+      \fill (\x,\y) circle (0.6mm);
+  \draw[thick] (-3,-2.4) .. controls +(77:9) and +(257:9) .. (3,2.4);
+  \draw[help lines] (-3,-2.4) -- (-1,6.4) node[right] {P};
+  \draw[help lines] (3,2.4) -- (1,-6.4) node[right] {Q};
+  \draw[help lines] (-1,6.4) -- (1,-6.4);
+\end{tikzpicture}
+\end{document}
