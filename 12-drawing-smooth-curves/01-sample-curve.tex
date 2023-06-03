@@ -1,0 +1,9 @@
+\documentclass[border=10pt]{standalone}
+\usepackage{pgfplots}
+\begin{document}
+\begin{tikzpicture}
+  \begin{axis}[axis lines=none]
+    \addplot [domain=-3:3, smooth, thick] { x^3 - 5*x };
+  \end{axis}
+\end{tikzpicture}
+\end{document}
