@@ -1,0 +1,10 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usetikzlibrary{hobby}
+\begin{document}
+\begin{tikzpicture}
+  \foreach \x/\y in { -3/-2.4, -1.3/0.86,
+    1.3/-0.86, 3/2.4 }
+      \fill (\x,\y) circle (0.6mm);
+\draw plot[hobby,thick] coordinates { (-3,-2.4) (-1.3,0.86) (1.3,-0.86) (3,2.4)};
+\end{tikzpicture}
+\end{document}
