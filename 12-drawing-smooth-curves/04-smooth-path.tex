@@ -1,0 +1,13 @@
+\documentclass[border=10pt]{standalone}
+\usepackage{pgfplots}
+\begin{document}
+\begin{tikzpicture}
+  \draw[domain=-3:3,samples=50,color=gray!50,thick] plot (\x, \x^3/5 - \x);
+  \foreach \x/\y in { -3/-2.4, -2/0.4, -0.4/0.4,
+    0.4/-0.4, 2/-0.4, 3/2.4 }
+      \fill (\x,\y) circle (0.6mm);
+  \draw (-3,-2.4) to[out=77,in=240] (-2,0.4)
+    to[out=60,in=135, looseness=1.2] (-0.4,0.4) to[out=-45,in=135] (0.4,-0.4)
+    to[out=-45,in=-120,looseness=1.2] (2,-0.4) to[out=60,in=257] (3,2.4);
+\end{tikzpicture}
+\end{document}
