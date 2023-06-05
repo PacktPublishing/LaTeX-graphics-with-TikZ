@@ -1,0 +1,11 @@
+\documentclass{article}
+\usepackage[english]{babel}
+\usepackage{tikz,blindtext}
+\usepackage{atbegshi}
+\AtBeginShipout{\AtBeginShipoutAddToBox{\tikz[overlay,remember picture]]
+  \node[rotate=40,scale=10,lightgray,font=\bfseries]
+    at (current page.center) {DRAFT};}}
+\pagestyle{empty}
+\begin{document}
+\blinddocument
+\end{document}
