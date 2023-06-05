@@ -1,0 +1,14 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usetikzlibrary{decorations.pathmorphing}
+\begin{document}
+\begin{tikzpicture}
+  \draw[decorate,decoration={zigzag,pre=curveto,post=curveto,pre length=4.5mm,post length=3mm}]
+    (0,0) arc(180:0:1);
+  \draw[decorate,decoration=saw,yshift=-8mm]
+    (0,0) arc(180:0:1);
+  \draw[decorate,decoration=random steps,yshift=-16mm]
+    (0,0) arc(180:0:1);
+  \draw[decorate,decoration=lineto,yshift=-20mm]
+    (0,0) arc(180:0:1);
+\end{tikzpicture}
+\end{document}
