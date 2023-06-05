@@ -1,0 +1,11 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usetikzlibrary{calc}
+\begin{document}
+\begin{tikzpicture}
+  \foreach \i [remember=\i as \j (initially 6),
+    evaluate=\i as \c using 20*\i] in {5.95,5.9,...,0}
+    \fill[fill=black!60!blue!\c!white]
+      ($(0,0)!\i!\i*180:(1,0)$) --
+      ($(0,0)!\j!\j*180:(1,0)$) -- (0,0);
+\end{tikzpicture}
+\end{document}
