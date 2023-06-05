@@ -1,0 +1,8 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usetikzlibrary{calc}
+\begin{document}
+\begin{tikzpicture}
+  \foreach \i in {0,0.025,...,1}
+    \draw ($(0,0)!\i!\i*360:(1,0)$) circle(0.08*\i);
+\end{tikzpicture}
+\end{document}
