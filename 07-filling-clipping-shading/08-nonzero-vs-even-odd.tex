@@ -1,0 +1,10 @@
+\documentclass[tikz,border=10pt]{standalone}
+\begin{document}
+\begin{tikzpicture}
+  \begin{scope}[xshift=-2.25cm]
+    \fill[blue!50]
+    (90:1) -- (234:1) -- (18:1) -- (162:1)   -- (306:1) -- cycle;
+  \end{scope}  \fill[blue!50, even odd rule]
+    (90:1) -- (234:1) -- (18:1) -- (162:1)   -- (306:1) -- cycle;
+\end{tikzpicture}
+\end{document}
