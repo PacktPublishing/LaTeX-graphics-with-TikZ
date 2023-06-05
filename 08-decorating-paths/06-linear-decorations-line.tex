@@ -1,0 +1,10 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usetikzlibrary{positioning}
+\usetikzlibrary{decorations.pathmorphing}
+\begin{document}
+\begin{tikzpicture}
+  \draw[decorate,decoration=zigzag] (0,0) -- (2,0);
+  \draw[decorate,decoration=saw,yshift=-6mm] (0,0) -- (2,0);
+  \draw[decorate,decoration={random steps,segment length=2mm},yshift=-12mm] (0,0) -- (2,0);
+\end{tikzpicture}
+\end{document}
