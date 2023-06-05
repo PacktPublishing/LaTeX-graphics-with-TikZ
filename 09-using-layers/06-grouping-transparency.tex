@@ -1,0 +1,13 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{babel}
+\usepackage{blindtext}
+\begin{document}
+\begin{tikzpicture}
+  \begin{scope}[opacity=0.6, transparency group]
+    \draw [line width=4mm, red] circle(1);
+    \fill[rounded corners, fill=red, rotate=15]
+      (-1.3,-0.2) rectangle (1.3,0.2);
+  \end{scope}
+  \node[rotate=15] {TOP SECRET};
+\end{tikzpicture}
+\end{document}
