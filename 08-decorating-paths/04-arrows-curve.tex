@@ -1,0 +1,10 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usetikzlibrary{decorations.markings}
+\begin{document}
+\begin{tikzpicture}
+\draw[-stealth, postaction=decorate,
+  decoration = {markings, mark = between positions 0.1
+  and 1 step 0.1 with {\arrow{stealth}}}]
+      (0,0) arc(180:0:1) arc(-180:0:1);
+\end{tikzpicture}
+\end{document}
