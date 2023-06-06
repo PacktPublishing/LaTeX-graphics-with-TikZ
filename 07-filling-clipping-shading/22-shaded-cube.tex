@@ -1,0 +1,11 @@
+\documentclass[tikz,border=10pt]{standalone}
+\begin{document}
+\begin{tikzpicture}
+  \shade[left color=black!60, right color=black!10]
+    (0,0,0) -- (1,0,0)  -- (1,1,0)  -- (0,1,0);
+  \shade[left color=black!10, right color=black!80]
+    (1,0,0) -- (1,0,-1) -- (1,1,-1) -- (1,1,0);
+  \shade[bottom color=black!10, top color=black!80]
+    (0,1,0) -- (0,1,-1) -- (1,1,-1) -- (1,1,0);
+\end{tikzpicture}
+\end{document}
