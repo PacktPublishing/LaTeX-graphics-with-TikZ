@@ -1,0 +1,11 @@
+\documentclass[tikz,border = 10pt]{standalone}
+\usetikzlibrary{matrix}
+\begin{document}
+\begin{tikzpicture}
+  \matrix [matrix of nodes, draw,
+      nodes = {circle, draw, minimum width=2em} ] {
+    A & B & C \\
+    D & E & |[red]|F \\
+   };
+\end{tikzpicture}
+\end{document}
