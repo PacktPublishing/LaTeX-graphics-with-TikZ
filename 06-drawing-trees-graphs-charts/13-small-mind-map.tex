@@ -1,0 +1,14 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usetikzlibrary{mindmap}
+\begin{document}
+\begin{tikzpicture}[
+    mindmap,
+    concept color = blue!50,
+    text = white,
+  ]
+  \node [concept, font=\Huge\sffamily\bfseries] {TikZ}
+    child [clockwise from = 0] {
+      node [concept, font=\Large\sffamily] {Graphs}
+  };
+\end{tikzpicture}
+\end{document}
