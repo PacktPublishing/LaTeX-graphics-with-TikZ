@@ -1,0 +1,12 @@
+\documentclass[tikz,border = 10pt]{standalone}
+\usetikzlibrary{graphs,quotes}
+\begin{document}
+\begin{tikzpicture}[nodes = {text depth = 1ex,
+    text height = 2ex},
+    every edge quotes/.style = {font=\tiny\ttfamily,
+  above, inner sep = 0pt}]
+  \graph [grow right = 2cm]
+    { tex -> ["latex"] dvi
+          -> ["dvips"] ps -> ["ps2pdf"] pdf };
+\end{tikzpicture}
+\end{document}
