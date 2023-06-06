@@ -1,0 +1,27 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{hvlogos}
+\begin{document}
+\begin{tikzpicture}[
+  level 1/.style = { level distance = 8mm,
+                     sibling distance = 20mm },
+  level 2/.style = { level distance = 10mm,
+                     sibling distance = 20mm }, 
+  treenode/.style = {shape = rectangle,
+    rounded corners, draw,
+    top color=white, bottom color=blue!30},
+  every child node/.style = {treenode},
+  engine/.style = {inner sep = 1pt, font=\tiny, above}
+]
+\node [treenode] {\TeX}
+  child { node {\LaTeX}
+    child { node {\pdfLaTeX}
+      edge from parent node[engine, sloped] {\pdfTeX}}
+    child { node {\XeLaTeX}
+      edge from parent node[engine, left]   {\XeTeX} }
+    child { node {\LuaLaTeX}
+      edge from parent node[engine, sloped] {\LuaTeX}}
+  }
+  child { node {\ConTeXt} }
+;
+\end{tikzpicture}
+\end{document}
