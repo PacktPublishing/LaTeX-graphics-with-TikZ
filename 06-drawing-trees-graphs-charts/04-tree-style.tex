@@ -1,0 +1,14 @@
+\documentclass[tikz,border=10pt]{standalone}
+\begin{document}
+\begin{tikzpicture}[thick]
+  \node [draw, black, rectangle] {A}
+    [red, ->]
+    child { node {1} }
+    child { node {2} }
+    child [densely dashed]
+      { node [draw, blue, circle] {3} }
+    child { node {4} }
+    child { node {5} }
+  ;
+\end{tikzpicture}
+\end{document}
