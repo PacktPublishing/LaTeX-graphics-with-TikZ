@@ -1,0 +1,9 @@
+\documentclass[tikz,border=2pt]{standalone}
+\begin{document}
+\begin{tikzpicture}[even odd rule]
+  \draw[dashed,gray] (-3,0) rectangle (3,2);
+  \clip (-3,0) rectangle (3,2);
+  \fill[red!70] (-1,0) circle (1.2) (-1,0) circle (2);
+  \fill[red!70]  (1,0) circle (1.2)  (1,0) circle (2);
+\end{tikzpicture}
+\end{document}
