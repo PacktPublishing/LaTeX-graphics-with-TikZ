@@ -1,0 +1,15 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usetikzlibrary{trees}
+\begin{document}
+\begin{tikzpicture}[clockwise from = 180,
+  sibling angle=45]
+\node {A} child { node {1} };
+\node {A}
+  child { node {1} }
+  child { node {2} }
+  child { node {3} }
+  child { node {4} }
+  child { node {5} }
+;
+\end{tikzpicture}
+\end{document}
