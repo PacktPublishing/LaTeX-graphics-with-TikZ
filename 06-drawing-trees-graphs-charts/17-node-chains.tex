@@ -1,0 +1,10 @@
+\documentclass[tikz,border = 10pt]{standalone}
+\usetikzlibrary{graphs}
+\begin{document}
+\begin{tikzpicture}[nodes = {text depth = 1ex,
+    text height = 2ex}]
+  \graph { tex -> dvi -> ps -> pdf,
+           bib -> bbl,
+           bbl -> dvi };
+\end{tikzpicture}
+\end{document}
