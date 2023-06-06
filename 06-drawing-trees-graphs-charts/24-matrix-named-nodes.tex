@@ -1,0 +1,15 @@
+\documentclass[tikz,border = 10pt]{standalone}
+\usetikzlibrary{matrix}
+\begin{document}
+\begin{tikzpicture}
+  \matrix (m) [matrix of nodes,
+    row sep = 2em, column sep = 2em,
+    nodes = {text depth = 1ex, text height = 2ex}
+  ]
+  {
+    tex & |(d)|dvi & ps \\
+        & |(p)|pdf &    \\
+  };
+  \draw (d) -- (p);
+\end{tikzpicture}
+\end{document}
