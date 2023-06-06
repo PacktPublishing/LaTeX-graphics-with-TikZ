@@ -1,0 +1,8 @@
+\documentclass[tikz,border = 10pt]{standalone}
+\usetikzlibrary{graphs}
+\begin{document}
+\begin{tikzpicture}[nodes = {text depth = 1ex,
+    text height = 2ex}]
+  \graph { tex -> {dvi, pdf } -> html };
+\end{tikzpicture}
+\end{document}
