@@ -1,11 +1,17 @@
+% You will need to download two images, router.eps and switch.eps
+% get them from https://www.cisco.com/c/en/us/about/brand-center/network-topology-icons.html
+% As of August 2023, switch.eps is missing in the doc.zip that downloads from cisco
+% so you can instead just google an image via https://www.google.com/search?q=cisco+switch+icon
 \documentclass[tikz,border=10pt]{standalone}
 \usetikzlibrary{positioning}
 \begin{document}
 \begin{tikzpicture}
   \node (router) [inner sep=0pt]
-    {\includegraphics[width=2cm]{router.pdf}};
+    {\includegraphics[width=2cm]{router.eps}};
   \node (switch) [inner sep=0pt, right = of router]
     {\includegraphics[width=2cm]{switch.pdf}};
+%  Or, if you don't have a pdf or an eps, use this:
+%     {\includegraphics[width=4cm]{switch.jpeg}};
   \draw[double] (router) -- (switch);
 \end{tikzpicture}
 \end{document}
